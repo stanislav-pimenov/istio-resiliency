@@ -76,7 +76,7 @@ Execute gatling performance test plan without any connection pool settings
 #### STEP 2
 
 Add connection pool within destination rule to limit number of connection to wiremock by 190 ( just took a value less than 200  - which is the number of wiremock threads)
-
+```yaml
  trafficPolicy:
     connectionPool:
       tcp:
@@ -85,6 +85,7 @@ Add connection pool within destination rule to limit number of connection to wir
         http1MaxPendingRequests: 1
         http2MaxRequests: 190
         maxRequestsPerConnection: 1
+```
 
 ![](img/190%20requests%20-%201%20pending%20-%201%20rpc.png)
 ![](img/190%20requests%20-%201%20pending%20-%201%20rpc%20-%20response time.png)
