@@ -3,7 +3,7 @@
 
 ### Environment
 
-Istio version: 1.3-RC0
+Istio version: [1.3.0-rc1](https://github.com/istio/istio/releases/tag/1.3.0-rc.1)
 
 Wiremock version: 2.24.1
 
@@ -88,7 +88,7 @@ Add connection pool within destination rule to limit number of connection to wir
 ```
 
 ![](img/190%20requests%20-%201%20pending%20-%201%20rpc.png)
-![](img/190%20requests%20-%201%20pending%20-%201%20rpc%20-%20response time.png)
+![](img/190%20requests%20-%201%20pending%20-%201%20rpc%20-%20response%20time.png)
 ![](img/190%20requests%20-%201%20pending%20-%201%20rpc%20-%20transactions.png)
 
 **Summary**: we got much more OK responses. Better response time
