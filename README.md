@@ -1,6 +1,8 @@
 # istio-resiliency
 ## Testing resiliency strategies.
 
+### Environment
+
 Istio version: 1.3-RC0
 
 Wiremock version: 2.24.1
@@ -8,6 +10,17 @@ Wiremock version: 2.24.1
 Wiremock Dockerfile: [Dockerfile](wiremock/Dockerfile)
 
 Environment setup guide: [minikube guide](https://github.com/stanislav-pimenov-epam/minikube-install-guide)
+
+#### Deployment
+
+ // **tbd** build and deploy wiremock instance
+
+ // **tbd** scaling for circuit breaker tests
+
+#### Istio configurations:
+ - gateway //**tdb**
+ - timeout 10s
+ - retry 0
 
 ### Testing bulkhead on minikube
 
@@ -83,9 +96,9 @@ Wiremock threads grow from VisualVM shows that 190 threads were used
 
 ![](img/190%20requests%20-%2010%20pending%20-%20100%20rpc%20-%20threads.png)
 
-If wiremock call misses the thread pool we get fast response  (within 100 ms) with 503 error with overflow reason
+If wiremock call misses the thread pool we get fast response  (within 100 ms) with 503 error with **overflow** reason
 
-(img/threadpool150-timeout10-503response.png]
+![](img/threadpool150-timeout10-503response.png)
 
 #### STEP 3
 
